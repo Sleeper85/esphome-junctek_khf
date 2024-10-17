@@ -2,7 +2,7 @@
 // Version : 1.1.1
 // GitHub  : https://github.com/Sleeper85/esphome-junctek_khf
 
-#include "junctek_khf_wod.h"
+#include "junctek_khf_rs485.h"
 
 #include "esphome/core/log.h"
 #include "esphome/core/optional.h"
