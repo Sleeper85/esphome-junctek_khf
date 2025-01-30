@@ -1,5 +1,5 @@
-# Updated : 2024.08.09
-# Version : 1.1.1
+# Updated : 2025.01.29
+# Version : 1.1.2
 # GitHub  : https://github.com/Sleeper85/esphome-junctek_khf
 
 import esphome.codegen as cg
@@ -117,7 +117,7 @@ CONFIG_SCHEMA = cv.All(
                 device_class=DEVICE_CLASS_BATTERY,
                 state_class=STATE_CLASS_MEASUREMENT,
             ),
-             cv.Optional(CONF_TEMPERATURE): sensor.sensor_schema(
+            cv.Optional(CONF_TEMPERATURE): sensor.sensor_schema(
                 unit_of_measurement=UNIT_CELSIUS,
                 icon=ICON_EMPTY,
                 accuracy_decimals=0,
@@ -128,21 +128,21 @@ CONFIG_SCHEMA = cv.All(
                 unit_of_measurement=UNIT_KILOWATT_HOUR,
                 icon=ICON_EMPTY,
                 accuracy_decimals=3,
-                device_class=DEVICE_CLASS_POWER,
+                device_class=DEVICE_CLASS_ENERGY,
                 state_class=STATE_CLASS_MEASUREMENT,
             ),
             cv.Optional(CONF_DISCHARGED_KWH): sensor.sensor_schema(
                 unit_of_measurement=UNIT_KILOWATT_HOUR,
                 icon=ICON_EMPTY,
                 accuracy_decimals=3,
-                device_class=DEVICE_CLASS_POWER,
+                device_class=DEVICE_CLASS_ENERGY,
                 state_class=STATE_CLASS_MEASUREMENT,
             ),
             cv.Optional(CONF_BATTERY_CAPACITY_AH): sensor.sensor_schema(
                 unit_of_measurement=UNIT_AMPERE_HOUR,
                 icon=ICON_EMPTY,
                 accuracy_decimals=0,
-                device_class=DEVICE_CLASS_ENERGY,
+                device_class=DEVICE_CLASS_EMPTY,
                 state_class=STATE_CLASS_MEASUREMENT,
             ),
             cv.Optional(CONF_SOC100_VOLTAGE): sensor.sensor_schema(
